@@ -30,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-Xx-9KK">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-Xx-9KK">
                                 <rect key="frame" x="83" y="309" width="248" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="fWi-LY-aiO"/>
@@ -47,7 +47,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xi6-Qa-BW4"/>
-                                    <segue destination="6Y4-gA-vq7" kind="show" id="oyc-f7-0RM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,6 +66,7 @@
                     <connections>
                         <outlet property="loginTF" destination="Oe4-CE-qcI" id="s8s-gQ-Awe"/>
                         <outlet property="paswordTF" destination="tI5-Xx-9KK" id="bjx-cT-hE2"/>
+                        <segue destination="6Y4-gA-vq7" kind="show" identifier="detailSegue" id="WHb-eu-2L3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,14 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PassDataProject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-jV-Iga">
-                                <rect key="frame" x="84" y="80" width="246" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF3-h4-1zR">
-                                <rect key="frame" x="163" y="384" width="88" height="35"/>
+                                <rect key="frame" x="163" y="320" width="88" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="n4J-MS-SxZ"/>
                                 </constraints>
@@ -98,14 +92,20 @@
                                     <action selector="goBackTapped:" destination="6Y4-gA-vq7" eventType="touchUpInside" id="t4Z-Ze-KuF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PassDataProject" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nU-jV-Iga">
+                                <rect key="frame" x="84.5" y="121" width="245.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vxe-jX-H00"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1nU-jV-Iga" firstAttribute="top" secondItem="vxe-jX-H00" secondAttribute="top" constant="80" id="8sM-P5-8Qe"/>
-                            <constraint firstItem="qF3-h4-1zR" firstAttribute="top" secondItem="1nU-jV-Iga" secondAttribute="bottom" constant="262" id="Bt4-4r-enQ"/>
                             <constraint firstItem="1nU-jV-Iga" firstAttribute="centerX" secondItem="vxe-jX-H00" secondAttribute="centerX" id="eiv-7W-e28"/>
                             <constraint firstItem="qF3-h4-1zR" firstAttribute="centerX" secondItem="vxe-jX-H00" secondAttribute="centerX" id="pPn-YY-jas"/>
+                            <constraint firstItem="1nU-jV-Iga" firstAttribute="top" secondItem="vxe-jX-H00" secondAttribute="top" constant="121" id="tXz-VO-UrC"/>
+                            <constraint firstItem="qF3-h4-1zR" firstAttribute="top" secondItem="1nU-jV-Iga" secondAttribute="bottom" constant="157" id="yuz-cb-ckY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h6P-9i-Pwo"/>
@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sC8-i1-cXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="-1"/>
+            <point key="canvasLocation" x="847.82608695652175" y="-1.3392857142857142"/>
         </scene>
     </scenes>
     <resources>
