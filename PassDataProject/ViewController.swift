@@ -11,12 +11,25 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var paswordTF: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
     
     // переход на 2-ой контроллер при нажатии на кнопку
     @IBAction func loginTapped(_ sender: UIButton) {
         
         performSegue(withIdentifier: "detailSegue", sender: nil)
     }
+    
+    
+    // реалищация сигвея для возврата на 1-ый контроллер
+    @IBAction func unwindSegueToMainScreen (segue: UIStoryboardSegue){
+        // проверка названия сигвея
+        guard segue.identifier == "unwindSegue" else {return}
+        // ссылка на контроллер берем из него текст
+        guard let svc = segue.source as? SecondViewController else {return}
+        self.resultLabel.text = svc.label.text
+    }
+    
+
     
     // передача в 2-ой контроллер текста из loginTF
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

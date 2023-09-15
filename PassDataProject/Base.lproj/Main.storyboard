@@ -49,15 +49,23 @@
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xi6-Qa-BW4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WS-Yu-VZa">
+                                <rect key="frame" x="207" y="534" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Oe4-CE-qcI" firstAttribute="top" secondItem="yNM-CZ-sbE" secondAttribute="bottom" constant="37" id="0Aj-vo-uRT"/>
+                            <constraint firstItem="3WS-Yu-VZa" firstAttribute="top" secondItem="fg5-40-grp" secondAttribute="bottom" constant="111" id="6dG-WN-qAj"/>
                             <constraint firstItem="yNM-CZ-sbE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Crr-AF-ttj"/>
                             <constraint firstItem="fg5-40-grp" firstAttribute="top" secondItem="tI5-Xx-9KK" secondAttribute="bottom" constant="45" id="HBw-yA-nyV"/>
                             <constraint firstItem="tI5-Xx-9KK" firstAttribute="centerX" secondItem="Oe4-CE-qcI" secondAttribute="centerX" id="HIG-fe-Gqm"/>
                             <constraint firstItem="Oe4-CE-qcI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LSj-KU-6bL"/>
+                            <constraint firstItem="3WS-Yu-VZa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="goV-b4-XOt"/>
                             <constraint firstItem="tI5-Xx-9KK" firstAttribute="top" secondItem="Oe4-CE-qcI" secondAttribute="bottom" constant="56" id="hCK-8r-32w"/>
                             <constraint firstItem="fg5-40-grp" firstAttribute="centerX" secondItem="tI5-Xx-9KK" secondAttribute="centerX" id="id3-Zp-7KR"/>
                             <constraint firstItem="yNM-CZ-sbE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yZ0-ws-xt3"/>
@@ -66,6 +74,7 @@
                     <connections>
                         <outlet property="loginTF" destination="Oe4-CE-qcI" id="s8s-gQ-Awe"/>
                         <outlet property="paswordTF" destination="tI5-Xx-9KK" id="bjx-cT-hE2"/>
+                        <outlet property="resultLabel" destination="3WS-Yu-VZa" id="4bw-Aq-YOc"/>
                         <segue destination="6Y4-gA-vq7" kind="show" identifier="detailSegue" id="WHb-eu-2L3"/>
                     </connections>
                 </viewController>
@@ -111,9 +120,11 @@
                     <navigationItem key="navigationItem" id="h6P-9i-Pwo"/>
                     <connections>
                         <outlet property="label" destination="1nU-jV-Iga" id="Gxf-Xc-Pco"/>
+                        <segue destination="P2M-bO-Lv1" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="zde-S9-xfv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sC8-i1-cXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="P2M-bO-Lv1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="-1.3392857142857142"/>
         </scene>

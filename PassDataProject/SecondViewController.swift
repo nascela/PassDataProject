@@ -19,7 +19,9 @@ class SecondViewController: UIViewController {
         guard let login = self.login else {return}
         label.text = "Hello, \(login)"
     }
+    // переход на 1 контроллер
     @IBAction func goBackTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
 
